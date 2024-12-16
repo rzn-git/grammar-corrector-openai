@@ -12,7 +12,7 @@ def generate_response(user_input):
         completion = client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[
-                {"role": "system", "content": "You are a helpful assistant.You will just Correct the grammatical error of the user input text"},
+                {"role": "system", "content": "You are a helpful assistant.You will just Correct the grammatical error of the user input text. Do not summarise or create no existance sentence."},
                 {"role": "user", "content": user_input}
             ]
         )
