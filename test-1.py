@@ -10,9 +10,10 @@ client = OpenAI(
 def generate_response(user_input):
     try:
         completion = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="gpt-4o",
             messages=[
-                {"role": "system", "content": "You are a helpful assistant. You will just Correct the grammatical error of the user input text. Do not summarise or create non existence sentence."},
+                {"role": "system", "content": 
+                "You are a helpful assistant. You will just Correct the grammatical error of the user input text. Do not summarise or create non existence sentence. Try to keep all the sentences."},
                 {"role": "user", "content": user_input}
             ]
         )
