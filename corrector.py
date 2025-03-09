@@ -13,7 +13,7 @@ def generate_response(user_input):
             model="gpt-4o",
             messages=[
                 {"role": "system", "content": 
-                "You are a helpful assistant. You will just Correct the grammatical error of the user input text. Do not summarise or create non existence sentence. Try to keep all the sentences. Put punctuations. Create paragraphs where necessary."},
+                "You are a helpful assistant. You will just Correct the grammatical error of the user input text. Do not summarise or create non existence sentence. Try to keep all the sentences. Put punctuations. Create paragraphs where necessary. Remove timesstamps, urls, links from the text"},
                 {"role": "user", "content": user_input}
             ]
         )
